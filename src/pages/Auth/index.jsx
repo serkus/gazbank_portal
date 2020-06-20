@@ -2,7 +2,6 @@ import React from 'react';
 import {Form, Input} from 'antd'
 import Button from "../../components/Button";
 import Block from "../../components/Block";
-// import login from '../p';
 
 import './Auth.scss'
 
@@ -10,6 +9,7 @@ import './Auth.scss'
 const Auth = () => {
     const onFinish = values => {
         console.log('Success:', values);
+        this.props.history.push('/dashboard');
     };
 
     const onFinishFailed = errorInfo => {

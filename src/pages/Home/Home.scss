@@ -1,0 +1,169 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .header {
+    flex: 0 1 auto;
+    height: 70px;
+    width: 100%;
+    background: #0057B6;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    padding: 16px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+
+
+      svg {
+        height: 100%;
+      }
+
+
+      .text {
+        padding: 0 0 0 12px;
+        font-size: 24px;
+        font-weight: 900;
+        color: #FFFFFF;
+      }
+    }
+
+    .right-content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .search {
+        min-width: 500px;
+        position: relative;
+
+        .search-field {
+          height: 100%;
+          width: 100%;
+
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          right: 20px;
+          top: 10px;
+          width: 13px;
+          height: 13px;
+          border: 1px solid #262C40;
+          border-radius: 50%;
+          z-index: 20;
+        }
+
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: 18px;
+          top: 21px;
+          width: 4px;
+          height: 1px;
+          background: #262C40;
+          transform: rotate(45deg);
+          z-index: 20;
+        }
+      }
+
+      .user {
+        padding: 0 27px 0 59px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Poppins, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        /* identical to box height, or 129% */
+        color: #FFFFFF;
+
+        span {
+          padding: 0 0 0 5px;
+        }
+      }
+
+      .bell {
+        .bell-btn {
+          position: relative;
+
+          span {
+            position: absolute;
+            padding: 1px 4px;
+            background: #C84F4F;
+            color: #FFFFFF;
+            border-radius: 50%;
+            font-family: Poppins, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 15px;
+            bottom: 0;
+            right: -11px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .content {
+    padding: 62px 50px;
+    flex: 1 1 auto;
+    width: 100%;
+    background: url("../../cuiz.png") 0 0/100% 100% no-repeat;
+    display: flex;
+    justify-content: flex-end;
+
+    .interview {
+      width: 400px;
+
+      .text {
+        font-family: Proxima Nova, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 52px;
+        /* or 108% */
+        color: #FFFFFF;
+        margin-bottom: 40px;
+      }
+
+      .interview-btn {
+        width: 100%;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 1px;
+        background: transparent;
+        font-family: Proxima Nova, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+        /* identical to box height, or 156% */
+        color: #FFFFFF;
+        height: 54px;
+        transition: all .8s ease;
+        cursor: pointer;
+
+        &:hover {
+          background: #FFFFFF;
+          border: 1px solid #FFFFFF;
+          box-sizing: border-box;
+          border-radius: 1px;
+          color: #0057B6;
+        }
+      }
+    }
+  }
+}

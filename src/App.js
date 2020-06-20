@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {w3cwebsocket as W3CWebSocket} from 'websocket';
-import Auth from "./pages/Auth";
+import {Auth, Home} from "./pages/";
+import {Route} from 'react-router-dom';
 
 import './styles/index.scss'
 
@@ -19,7 +20,8 @@ class App extends Component {
     render() {
         return (
             <div className="wrapper">
-                <Auth/>
+                <Route exact path={['/', '/login']} component={Auth}/>
+                <Route exact path='/home' component={Home}/>
             </div>
         )
     }
