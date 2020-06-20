@@ -3,21 +3,20 @@
 -include_lib("nitro/include/nitro.hrl").
 -include_lib("n2o/include/n2o.hrl").
 -include_lib("kvs/include/cursors.hrl").
--reacord(User,{username, password, ldapid}).
--record(task, {id, theme, location, title, short, text, likes, dislikes}).
+-record(task, {id, theme, location, title, short, text, likes}).
 
 % Socket events mqtt;
 event(addtask)->
 	set_task(addtask).
 
 event(gettask)->
-	get_task()
+	get_task(mqtt.q()).
 
 event(addlike)->
-	ok.
+	mqtt.q(#task(mqtt.q(id),_,_ _,_,_,_ I+1, _).
 
 event(addcommit)->
-	ok.
+	commit(to_list(mqtt.q(id, text)).
 
 % Model task
 
