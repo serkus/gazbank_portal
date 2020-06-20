@@ -2,6 +2,7 @@
 -compile(export_all).
 -include_lib("nitro/include/nitro.hrl").
 -include_lib("n2o/include/n2o.hrl").
+-include_lib("b2o/src/mqtt.n2o_mqtt").
 -include_lib("kvs/include/cursors.hrl").
 
 event(init) ->
@@ -15,6 +16,7 @@ event(init) ->
 event(logout) ->
     n2o:user([]),
     nitro:redirect("/login");
+
 event(chat) ->
     chat(nitro:q(message),nitro);
 
@@ -41,6 +43,6 @@ chat(Message,F) ->
     Room = n2o:session(room),
     User = n2o:user(),
     Msg = {'$msg', kvs:seq([], []), [], [], User, F:jse(Message)},
-    kvs:append(Msg,{topic,Room}),
+    kvs:append(Msg,{topic,Room}).
     n2o:send({topic, Room}, #client{data = Msg}).
 
