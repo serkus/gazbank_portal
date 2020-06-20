@@ -2,15 +2,9 @@
 -compile(export_all).
 -include_lib("nitro/include/nitro.hrl").
 -include_lib("n2o/include/n2o.hrl").
--include_lib("n2o/include/emqttd").
--include_lib("kvs/include/cursors.hrl").
+%-include_lib("kvs/include/cursors.hrl").
 
 event(init) ->
-    %% login
-    %nitro:update(loginButton,
-    %#button({id=loginButton,
-    %body="Login",postback=login,source=[user,pass]}),
-    %[ event(#client{data=E})  || E <- lists:reverse(kvs:feed(Key)) ];
     ok;
     
 event(logout) ->
@@ -32,7 +26,6 @@ event(#ftp{sid=Sid,filename=Filename,status={event,stop}}=Data) ->
 
 event(login) ->
     n2o:user(User),
-    %n2o:session(room,Room),
     User = nitro:to_list(nitro:q(user));
 
 event(Event) ->

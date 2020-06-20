@@ -8,14 +8,11 @@
 
 -record(task, {id, theme, location, title, short, text, likes, dislikes}).
 
-get_ldap(id_data)->
-	{ok, result} = eldap:search(id_data)->
-   		eldap: bind(result),
-   	{error, raison} = eldap:search(id_data)->
-   		raison.
-
 get_tasks(Id_task) ->
-   % kvs:
-   ok.
-set_task(#task) ->
-    kvs:append(#task).
+   kvs:get(id_task),
+
+set_task(Task) ->
+    kvs:add(task).
+
+filter_task() ->
+	kvs:filter(30).

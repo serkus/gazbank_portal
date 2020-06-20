@@ -8,22 +8,15 @@
 -reacord(user,{username, password, viewProfil, ldapid}).
 
 event(logout)->
-    %n2o:user([]),
-    %nitro:redirect("/");
+    n2o:user([]),
     ok;
 
 event(init) ->
-    nitro:update(loginButton,
-      #button{id=loginButton,
-              body="Login",postback=login,source=[user,pass]});
-event(login) ->
+   ok.
 
+event(login) ->
     User = nitro:to_list(nitro:q(user)),
     n2o:user(User),
-    %n2o:session(room,Room),
-    nitro:clear(login),
-
-    %nitro:redirect("/index.htm?room="++Room),
     ok;
 
 event(getprofile) ->
@@ -42,7 +35,7 @@ get_ldap(id_data)->
         raison.
 
 get_profile(id) ->
-    ok.
+    kvs:get(user).
 
-set_field(Fields)->
-    ok.
+set_field(felds)->
+    kvs:get(fields).
