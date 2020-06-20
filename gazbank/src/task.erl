@@ -19,7 +19,6 @@ event(addlike)->
 event(addcommit)->
 	ok.
 
-
 % Model task
 
 get_task(Id_task)->

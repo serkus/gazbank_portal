@@ -22,7 +22,10 @@ event(login) ->
 event(getprofile) ->
     getprofile(mqtt.q()),
     Id_profile = get_ldap(id),
-    Anino = {#user,{_,_,true,Id_profile};
+    Anino = {#user,{_,_,true,Id_profile}->
+        kvs:get(profile, {_,_,_, Id_profile}),
+    Anino = {#user,{_,_,false,Id_profile}->
+        get_ldap(Id_profile).
 
 event(setprofile) ->
     ok.
