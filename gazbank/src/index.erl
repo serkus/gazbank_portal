@@ -2,10 +2,11 @@
 -compile(export_all).
 -include_lib("nitro/include/nitro.hrl").
 -include_lib("n2o/include/n2o.hrl").
-%-include_lib("kvs/include/cursors.hrl").
+-include_lib("kvs/include/cursors.hrl").
+%-include_lib(emqttd).
 
 event(init) ->
-    ok;
+    [].
     
 event(logout) ->
     n2o:user([]),

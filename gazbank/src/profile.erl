@@ -20,13 +20,14 @@ event(login) ->
     ok;
 
 event(getprofile) ->
-    getprofile(mqtt.q());
+    getprofile(mqtt.q()),
+    Id_profile = get_ldap(id),
+    Anino = {#user,{_,_,true, _};
 
 event(setprofile) ->
     ok.
 
 event(_) -> [].
-
 
 get_ldap(id_data)->
     {ok, result} = eldap:search(id_data)->

@@ -15,6 +15,9 @@ route_prefix(P) -> route(P).
 route(<<>>)              -> login;
 route(<<"index",_/binary>>) -> login;   % github static
 route(<<"login",_/binary>>) -> login;   % github static
-route(<<"app/index",_/binary>>) -> index; % priv static
+%route(<<"app/index",_/binary>>) -> index; % priv static
+routre(<<"task", _/binary>>) -> task;
+routre(<<"profile", _/binary>>) -> profile;
+
 route(<<"app/login",_/binary>>) -> login; % priv static
 route(_) -> login.

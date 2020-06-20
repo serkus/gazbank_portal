@@ -1,4 +1,3 @@
-
 -module(static).
 -compile(export_all).
 -include_lib("nitro/include/nitro.hrl").
