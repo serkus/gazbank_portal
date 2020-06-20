@@ -1,0 +1,10 @@
+{application,gazbank,
+             [{description,"SAMPLE WebSocket application"},
+              {vsn,"0.7.0"},
+              {registered,[]},
+              {applications,[public_key,asn1,kernel,stdlib,mnesia,ranch,
+                             cowboy,nitro,syntax_tools,compiler,xmerl,kvs,syn,
+                             n2o]},
+              {mod,{gazbank,[]}},
+              {env,[]},
+              {modules,[gazbank,index,login,routes]}]}.
