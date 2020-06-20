@@ -3,6 +3,7 @@
 -include_lib("n2o/include/n2o.hrl").
 -include_lib("n2o/include/n2o_json").
 -include_lib("kvs/include/cursors.hrl").
+-include_lib("kvs/include/cursors.hrl").
 
 -reacord(user,{username, password, viewProfil,e ldapid}).
 

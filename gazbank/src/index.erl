@@ -2,7 +2,7 @@
 -compile(export_all).
 -include_lib("nitro/include/nitro.hrl").
 -include_lib("n2o/include/n2o.hrl").
-%-include_lib("n2o/src/mqtt/).
+-include_lib("n2o/include/emqttd").
 -include_lib("kvs/include/cursors.hrl").
 
 event(init) ->
@@ -10,12 +10,11 @@ event(init) ->
     nitro:update(loginButton,
     #button({id=loginButton,
     body="Login",postback=login,source=[user,pass]}),
-
     [ event(#client{data=E})  || E <- lists:reverse(kvs:feed(Key)) ];
     
 event(logout) ->
     n2o:user([]),
-    nitro:redirect("/login");
+    nitro:redirect("/");
 
 event(chat) ->
     chat(nitro:q(message),nitro);
@@ -45,4 +44,3 @@ chat(Message,F) ->
     Msg = {'$msg', kvs:seq([], []), [], [], User, F:jse(Message)},
     kvs:append(Msg,{topic,Room}).
     n2o:send({topic, Room}, #client{data = Msg}).
-

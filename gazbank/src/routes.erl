@@ -12,10 +12,9 @@ route_prefix(<<"/",P/binary>>) -> route(P);
 route_prefix(P) -> route(P).
 
 % Don't use fancy routers, be like poor man's pattern mach.
-
 route(<<>>)              -> login;
 route(<<"index",_/binary>>) -> index;   % github static
 route(<<"login",_/binary>>) -> login;   % github static
-route(<<"task",_/binary>>) -> index; % priv static  app
-route(<<"profile",_/binary>>) -> login; % priv static
-route<<(_,_/binary>>) -> login.
+route(<<"app/index",_/binary>>) -> index; % priv static
+route(<<"app/login",_/binary>>) -> login; % priv static
+route(_) -> login.

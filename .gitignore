@@ -1,3 +1,5 @@
 gazbank/deps/*
 mad
 gazbank.*
+deps
+ebin
