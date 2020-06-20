@@ -13,7 +13,7 @@ event(gettask)->
 	get_task(mqtt.q()).
 
 event(addlike)->
-	mqtt.q(#task(mqtt.q(id),_,_ _,_,_,_ I+1, _).
+	mqtt.q(#task(mqtt.q(id),_,_ _,_,_,_,I+1)).
 
 event(addcommit)->
 	commit(to_list(mqtt.q(id, text)).
