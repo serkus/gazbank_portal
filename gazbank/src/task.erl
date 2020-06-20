@@ -13,8 +13,9 @@ get_ldap(id_data)->
    		eldap: bind(result),
    	{error, raison} = eldap:search(id_data)->
    		raison.
+
 get_tasks(Id_task) ->
    % kvs:
    ok.
 set_task(#task) ->
-    kvs:append(#task)
+    kvs:append(#task).

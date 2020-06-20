@@ -5,11 +5,12 @@
 -include_lib("kvs/include/cursors.hrl").
 -include_lib("kvs/include/cursors.hrl").
 
--reacord(user,{username, password, viewProfil,e ldapid}).
+-reacord(user,{username, password, viewProfil, ldapid}).
 
-event(logout) ->
-    n2o:user([]),
-    nitro:redirect("/");
+event(logout)->
+    %n2o:user([]),
+    %nitro:redirect("/");
+    ok;
 
 event(init) ->
     nitro:update(loginButton,
