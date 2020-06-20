@@ -1,1 +1,1 @@
-[]
+[public_key,kernel,stdlib,fs,inets,crypto,mnesia,cowlib,ssl,ranch,active,cowboy,kvs,mad,n2o,nitro,rocksdb,sh,syn]

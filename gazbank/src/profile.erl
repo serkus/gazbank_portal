@@ -4,7 +4,7 @@
 -include_lib("n2o/include/n2o_json").
 -include_lib("kvs/include/cursors.hrl").
 
--reacord(User,{username, password, viewProfil,e ldapid}).
+-reacord(user,{username, password, viewProfil,e ldapid}).
 
 event(logout) ->
     n2o:user([]),
@@ -24,8 +24,20 @@ event(login) ->
     %nitro:redirect("/index.htm?room="++Room),
     ok;
 
+event(getprofile) ->
+    getprofile(mqtt.q());
+
+event(setprofile) ->
+    ok.
+
 event(_) -> [].
 
+
+get_ldap(id_data)->
+    {ok, result} = eldap:search(id_data)->
+        eldap: bind(result),
+    {error, raison} = eldap:search(id_data)->
+        raison.
 
 get_profile(id) ->
     ok.
