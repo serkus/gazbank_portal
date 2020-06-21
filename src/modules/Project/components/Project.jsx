@@ -147,6 +147,11 @@ const Project = () => {
             <h3>Топ наших лучших экспертов</h3>
             <div className="bottom">
                 <div className="persons">
+                    <div className="prev">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 1.60303L1 6.09331L7 10.5836" stroke="#0057B6"/>
+                        </svg>
+                    </div>
                     <div className="first">
                         <svg width="270" height="271" viewBox="0 0 270 271" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -203,11 +208,15 @@ const Project = () => {
                         <div className="user-wrapper">
                             <div className="user-projects">
                                 <div>29</div>
-                                <span>предложенных<br/>проектов</span>
+                                <span>предложенных</span><br/>
+                                <span>проектов</span>
+                            </div>
+                            <div className="vr">
                             </div>
                             <div className="user-votes">
                                 <div>157</div>
-                                <span>отданных<br/>голосов</span>
+                                <span>отданных</span><br/>
+                                <span>голосов</span>
                             </div>
                         </div>
 
@@ -215,7 +224,7 @@ const Project = () => {
                     <div className="last">
                         <svg width="270" height="271" viewBox="0 0 270 271" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
-                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="39" y="40" width="192"
+                            <mask id="mask0" maskUnits="userSpaceOnUse" x="39" y="40" width="192"
                                   height="191">
                                 <path
                                     d="M202.5 202.947C239.779 165.748 239.779 105.437 202.5 68.2381C165.221 31.0394 104.779 31.0394 67.5 68.2381C30.2208 105.437 30.2208 165.748 67.5 202.947C104.779 240.145 165.221 240.145 202.5 202.947Z"
@@ -260,7 +269,11 @@ const Project = () => {
                             </g>
                         </svg>
                     </div>
-
+                    <div className="next">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 10.5811L7 6.09077L1 1.60049" stroke="#0057B6"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>

@@ -190,6 +190,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      position: relative;
 
       .leader {
         font-family: Proxima Nova, sans-serif;
@@ -212,28 +213,29 @@
           justify-content: center;
           align-items: center;
 
+          .vr {
+            width: 1px;
+            height: 90px;
+            background: #B8BDCE;
+            margin: 2px;
+          }
+
           .user-projects {
             width: 100px;
-            text-align: center;
+            text-align: right;
             font-size: 18px;
             line-height: 24px;
             color: #262C40;
-            margin: 0 30px;
-
-            span {
-              font-size: 18px;
-              line-height: 24px;
-              text-align: center;
-              color: #262C40;
-            }
+            margin: 0 35px 0 0;
 
             div {
+              padding-left: 20px;
+              text-align: center;
               margin-bottom: 10px;
               font-size: 40px;
               line-height: 24px;
               font-weight: normal;
               color: #0057B6;
-
             }
           }
 
@@ -242,16 +244,7 @@
             font-size: 18px;
             line-height: 24px;
             color: #262C40;
-            margin: 0 30px;
-
-
-            span {
-              line-height: 24px;
-              margin-top: 10px;
-              font-size: 18px;
-              text-align: center;
-              color: #262C40;
-            }
+            margin: 0 5px;
 
             div {
               margin-bottom: 10px;
@@ -262,7 +255,26 @@
             }
           }
         }
+
+
       }
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 110px;
+
+
+    }
+
+    .prev {
+      cursor: pointer;
+      left: 340px;
+    }
+
+    .next {
+      cursor: pointer;
+      right: 340px;
     }
   }
 }
