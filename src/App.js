@@ -21,7 +21,7 @@ class App extends Component {
         return (
             <div className="wrapper">
                 <Route exact path={['/', '/login']} component={Auth}/>
-                <Route exact path='/home' component={Home}/>
+                <Route path='/home' component={Home}/>
             </div>
         )
     }

@@ -1,0 +1,268 @@
+.project-card {
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 16px 16px 41px 16px;
+
+  .photo {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .info {
+    padding: 21px 0 34px 0;
+    font-family: Proxima Nova, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    .theme {
+
+      font-size: 14px;
+      line-height: 24px;
+      color: #7C8793;
+    }
+
+    .info-text {
+      font-size: 18px;
+      line-height: 24px;
+      color: #262C40;
+    }
+  }
+
+  .vote {
+    font-size: 18px;
+    width: 100%;
+    min-height: 44px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+    color: #FFFFFF;
+    border: none;
+    background: #0057B6;
+    border-radius: 1px;
+  }
+
+  .points {
+    padding: 34px 0 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7C8793;
+  }
+}
+
+.project {
+  background: #E9F1F9;
+  height: 100%;
+  overflow-y: auto;
+  padding: 80px 52px;
+
+  h3 {
+    font-family: Proxima Nova, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: #262C40;
+    width: 100%;
+    padding: 0 0 29px;
+
+    &:first-child {
+      font-size: 28px;
+    }
+
+    &:nth-child(5) {
+      text-align: center;
+    }
+
+  }
+
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 60px;
+
+
+    .project-card {
+      background: #FFFFFF;
+      border-radius: 5px;
+      padding: 16px 16px 41px 16px;
+    }
+
+    .project-info {
+      padding-left: 34px;
+
+      .description {
+        background: #FFFFFF;
+        padding: 22px 40px 22px 19px;
+
+        .description-title {
+          font-family: Proxima Nova, sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 24px;
+          color: #262C40;
+          padding-bottom: 14px;
+        }
+
+        .text {
+          padding-bottom: 31px;
+
+          p {
+            font-family: Proxima Nova, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            color: #262C40;
+          }
+        }
+
+        .author {
+          font-family: Proxima Nova, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
+          color: #7C8793;
+
+          .username {
+            font-size: 16px;
+            line-height: 24px;
+            color: #0057B6;
+          }
+        }
+      }
+    }
+
+    .comments-form {
+      margin-top: 28px;
+      background: #FFFFFF;
+      padding: 20px 22px 48px;
+      font-family: Proxima Nova, sans-serif;
+
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0 0 23px;
+        color: #262C40;
+      }
+
+      .comment-btn {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+        background: #0057B6;
+        border-radius: 1px;
+        border: none;
+        padding: 8px 20px;
+        margin-top: 32px;
+      }
+    }
+  }
+
+  .middle {
+    margin-bottom: 60px;
+
+    .project-cards {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .project-card {
+      margin-right: 21px;
+      height: 100% !important;
+      width: 440px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .bottom {
+    .persons {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      .leader {
+        font-family: Proxima Nova, sans-serif;
+        font-style: normal;
+        margin: 0 50px;
+
+        .name {
+          font-family: Proxima Nova, sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 24px;
+          color: #262C40;
+          text-align: center;
+          padding: 17px 0 10px;
+        }
+
+        .user-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .user-projects {
+            width: 100px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 24px;
+            color: #262C40;
+            margin: 0 30px;
+
+            span {
+              font-size: 18px;
+              line-height: 24px;
+              text-align: center;
+              color: #262C40;
+            }
+
+            div {
+              margin-bottom: 10px;
+              font-size: 40px;
+              line-height: 24px;
+              font-weight: normal;
+              color: #0057B6;
+
+            }
+          }
+
+          .user-votes {
+            text-align: center;
+            font-size: 18px;
+            line-height: 24px;
+            color: #262C40;
+            margin: 0 30px;
+
+
+            span {
+              line-height: 24px;
+              margin-top: 10px;
+              font-size: 18px;
+              text-align: center;
+              color: #262C40;
+            }
+
+            div {
+              margin-bottom: 10px;
+              font-size: 40px;
+              line-height: 24px;
+              font-weight: normal;
+              color: #0057B6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

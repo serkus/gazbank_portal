@@ -6,16 +6,15 @@ import Block from "../../components/Block";
 import './Auth.scss'
 
 
-const Auth = () => {
+const Auth = (props) => {
     const onFinish = values => {
         console.log('Success:', values);
-        this.props.history.push('/dashboard');
+        props.history.push('/home')
     };
 
     const onFinishFailed = errorInfo => {
         console.log('Failed:', errorInfo);
     };
-
     return (
         <section className="auth">
             <div className="auth__content">
